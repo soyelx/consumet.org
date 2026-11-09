@@ -9,6 +9,11 @@ languageCode = "en-US"
 paginate = 7
 rssLimit = 10
 
+# The external provider list (consumet/providers-status) changed format and the old
+# providers-list.json URL now returns 404. Don't fail the whole build because of it;
+# the extensions page simply renders without the live list.
+ignoreErrors = ["error-remote-getjson"]
+
 # Multilingual
 defaultContentLanguage = "en"
 disableLanguages = ["de", "nl"]
